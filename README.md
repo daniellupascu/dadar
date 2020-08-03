@@ -1,4 +1,4 @@
-## Frontend interview project
+<!-- ## Frontend interview project
 
 As part of our application process, we would like you to complete this take-home assignment. It should take no more than a few hours.
 
@@ -39,4 +39,4 @@ When you are ready for us to look at it, give us access to your fork so we can r
 ### Implementation details
 
 #### Icon component
-Currently `Icon` component internally uses free `font-awesome` icons. Please see [list](https://fontawesome.com/icons?m=free) of expected `name` values.
+Currently `Icon` component internally uses free `font-awesome` icons. Please see [list](https://fontawesome.com/icons?m=free) of expected `name` values. -->
