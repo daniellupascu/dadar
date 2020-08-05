@@ -658,6 +658,125 @@ exports[`Storyshots Chart Regular 1`] = `
 </div>
 `;
 
+exports[`Storyshots DropdownOptionWithAcronym Regular 1`] = `
+<div>
+  <div>
+    <div
+      className="undefined"
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      role="button"
+      tabIndex={0}
+    >
+      <div>
+        <div>
+          Daniel Lupascu
+        </div>
+        <div>
+          daniel@dixa.com
+        </div>
+      </div>
+    </div>
+  </div>
+  <br />
+  <div>
+    <div
+      className="undefined"
+      onClick={[Function]}
+      onKeyPress={[Function]}
+      role="button"
+      tabIndex={0}
+    >
+      <div>
+        DL
+      </div>
+      <div>
+        <div>
+          Daniel Lupascu
+        </div>
+        <div>
+          daniel@dixa.com
+        </div>
+      </div>
+    </div>
+  </div>
+  <br />
+  <div />
+</div>
+`;
+
+exports[`Storyshots DropdownWithSearch Regular 1`] = `
+<div>
+  <div>
+    <div
+      className="undefined"
+    >
+      <div
+        className="undefined"
+      >
+        <div>
+          <input
+            onChange={[Function]}
+            onFocus={[Function]}
+            value=""
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Input Regular 1`] = `
+<div>
+  <div>
+    <div
+      className="undefined"
+    >
+      <div>
+        Name
+      </div>
+      <div>
+        <input
+          onChange={[Function]}
+          placeholder="Name"
+          value=""
+        />
+      </div>
+    </div>
+  </div>
+  <br />
+  <div>
+    <div
+      className="undefined"
+    >
+      <div>
+        Name
+      </div>
+      <div>
+        <input
+          onChange={[Function]}
+          value="Daniel"
+        />
+      </div>
+    </div>
+  </div>
+  <br />
+  <div>
+    <div
+      className="undefined"
+    >
+      <div>
+        <input
+          onChange={[Function]}
+          value="Daniel"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
 exports[`Storyshots Spinner Regular 1`] = `
 <div
   style={

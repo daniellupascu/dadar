@@ -11,3 +11,9 @@ type User = {
   displayName?: Optional<string>;
   email?: Optional<string>;
 };
+
+type DropdownOption = {
+  title: string;
+  subtitle: string;
+  acronym?: string;
+};
