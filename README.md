@@ -16,9 +16,7 @@ Runs the storybook
 
 Runs snaphsot tests
 
-**Components created**
-
-In order to make our components testable and as reusable as possible all the elements of the Dropdown are separated and can be used in multiple circumstances<br />
+## Components created
 
 **DropdownWithSearch**
 
