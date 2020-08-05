@@ -1,42 +1,36 @@
-<!-- ## Frontend interview project
+## Frontend interview project
 
-As part of our application process, we would like you to complete this take-home assignment. It should take no more than a few hours.
+## How to run the app
 
-### You have 2 options:
-1. Create a new component that you would like us to see and discuss doing the interview.
-2. Improve an existing component by modifying it
+Clone repo and run:
 
-You can pick one of the options above.
+### `npm i`
 
-### Task notes
-- Consider current task more as a playground, feel free to add/adjust what you think will show off your skills and knowledge in a best way
-- The provided components are not examples of complete or ideal components, therefore:
-  1. They could be improved on
-  2. They could be commented on. It would be also greate if comments question the way we do things or provide an alternative approach
-  3. They could be a building block or an inspiration for creating a new custom component, feature
+Installs all the dependencies required by the app
 
-- There is a [contribution guide](https://github.com/Dixa-public//frontend-interview-project/blob/master/CONTRIBUTING.md) that we expect to be mostly followed (or questioned)
+### `npm run storybook`
 
-### Project setup
-1. Fork this repo
-2. Run `git clone git@github.com:{USERNAME}/frontend-interview-project.git` to clone a project.
-3. Open project directory with `cd frontend-interview-project`
-4. Run `npm i` command to install the dependencies.
-5. In order to run a storybook issue `npm run storybook`
+Runs the storybook
 
-### Requirements
-- [NodeJs](https://nodejs.org)
+### `npm t`
 
-### Project structure
-All of the components are placed in `src/components/` directory. And all of the storybooks are in `src/stories/`.
+Runs snaphsot tests
 
-### Contibuting guide
-See our [CONTRIBUTING guide](https://github.com/Dixa-public/frontend-interview-project/blob/master/CONTRIBUTING.md) for details.
+**Components created**
 
-### When you are done
-When you are ready for us to look at it, give us access to your fork so we can review and run it. When we are done you, of course, own the code you made.
+In order to make our components testable and as reusable as possible all the elements of the Dropdown are separated and can be used in multiple circumstances<br />
 
-### Implementation details
+**DropdownWithSearch**
 
-#### Icon component
-Currently `Icon` component internally uses free `font-awesome` icons. Please see [list](https://fontawesome.com/icons?m=free) of expected `name` values. -->
+Dropdown with a search field<br />
+shows a list of options when focused<br />
+user can filter the options by typing in the input<br />
+
+**Input**
+
+Renders an input and its label and can be used both as part of a dropdown or as a simple input<br />
+
+**DropdownOptionWithAcronym**
+
+Renders a dropdown option<br />
+If provided, it renders an icon with the option acronym<br />
