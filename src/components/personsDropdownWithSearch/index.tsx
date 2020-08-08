@@ -1,47 +1,51 @@
 import React, { useState, FC } from 'react';
 import classnames from 'classnames';
-import DropdownOption from '../dropdownOptionWIthAcronym';
+import DropdownOption from '../dropdownPersonOptionWIthAcronym';
 import Input from '../input';
+// looks like a false positive
+// eslint-disable-next-line import/no-unresolved
 import styles from './dropdownWithSearch.module.scss';
 
 interface Props {
-  options: Array<DropdownOption>;
+  options: Array<User>;
   className?: Optional<string>;
+  withAcronyms?: boolean;
 }
 
 const DropdownWithSearch: FC<Props> = ({
   options: initialOptions,
+  withAcronyms,
   className,
   ...otherProps
 }) => {
   const [inputValue, setInputValue] = useState('');
   const [isDropdownExpanded, setIsDropdownExpanded] = useState(false);
-  const [selectedOption, setSelectedOption] = useState<DropdownOption | null>(
-    null,
-  );
+  const [selectedPerson, setSelectedPerson] = useState<User | null>(null);
   const [options, setOptions] = useState(initialOptions);
 
   function onInputFocus(): void {
-    setSelectedOption(null);
+    setSelectedPerson(null);
     setIsDropdownExpanded(true);
   }
 
-  function onOptionClicked(option: DropdownOption): void {
+  function onOptionClicked(option: User): void {
     setInputValue('');
     setIsDropdownExpanded(false);
-    setSelectedOption(option);
+    setSelectedPerson(option);
   }
 
   function filterOptionsByTitle(
-    optionsToFilter: Array<DropdownOption>,
+    optionsToFilter: Array<User>,
     filterCriteria: string,
-  ): Array<DropdownOption> {
-    return optionsToFilter.filter((option: DropdownOption) =>
-      option.title
+  ): Array<User> {
+    return optionsToFilter.filter((user: User) => {
+      const { name, email } = user;
+      const stringToBeFiltered = name || email || '';
+      return stringToBeFiltered
         .toLowerCase()
         .replace(/\s/g, '')
-        .includes(filterCriteria.toLowerCase()),
-    );
+        .includes(filterCriteria.toLowerCase());
+    });
   }
 
   function onInputChange(inputText: string): void {
@@ -59,17 +63,22 @@ const DropdownWithSearch: FC<Props> = ({
   return (
     <div className={rootClass} {...otherProps}>
       <Input
-        value={selectedOption ? selectedOption.title : inputValue}
+        value={
+          selectedPerson
+            ? selectedPerson.name || selectedPerson.email || ''
+            : inputValue
+        }
         onChange={onInputChange}
         onInputFocus={onInputFocus}
       />
       {isDropdownExpanded && (
         <div className={styles.optionslist}>
-          {options.map((option: DropdownOption) => (
+          {options.map((user: User) => (
             <DropdownOption
-              key={option.title}
-              option={option}
+              key={user.id}
+              user={user}
               onOptionClick={onOptionClicked}
+              withAcronym={withAcronyms}
             />
           ))}
         </div>

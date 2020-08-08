@@ -1,30 +1,28 @@
 import React from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
-import DropdownOptionWithAcronym from '../components/dropdownOptionWIthAcronym';
+import DropdownPersonOptionWIthAcronym from '../components/dropdownPersonOptionWIthAcronym';
 
 const option = {
-  title: 'Daniel Lupascu',
-  subtitle: 'daniel@dixa.com',
-};
+  id: '1234-1234-1234-1234',
+  name: 'Daniel Lupascu',
+  email: 'daniel@dixa.com',
 
-const optionWithAcronym = {
-  title: 'Daniel Lupascu',
-  acronym: 'DL',
-  subtitle: 'daniel@dixa.com',
+  phoneNumber: '+4560860931',
 };
 
 export const regular: React.FC = () => (
   <div>
     <div>
-      <DropdownOptionWithAcronym
-        option={option}
+      <DropdownPersonOptionWIthAcronym
+        user={option}
         onOptionClick={(): void => {}}
       />
     </div>
     <br />
     <div>
-      <DropdownOptionWithAcronym
-        option={optionWithAcronym}
+      <DropdownPersonOptionWIthAcronym
+        user={option}
+        withAcronym
         onOptionClick={(): void => {}}
       />
     </div>
@@ -34,6 +32,6 @@ export const regular: React.FC = () => (
 );
 
 export default {
-  title: 'DropdownOptionWithAcronym',
+  title: 'DropdownPersonOptionWIthAcronym',
   decorators: [withKnobs],
 };

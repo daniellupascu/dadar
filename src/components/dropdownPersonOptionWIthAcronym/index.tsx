@@ -1,29 +1,31 @@
 import React, { FC } from 'react';
 import classnames from 'classnames';
-import styles from './dropdownOptionWithAcronym.module.scss';
+import Avatar from '../avatar';
+import styles from './dropdownPersonOptionWIthAcronym.module.scss';
 
 interface Props {
-  option: DropdownOption;
-  onOptionClick: (option: DropdownOption) => void;
-  acronym?: string;
+  user: User;
+  onOptionClick: (user: User) => void;
+  withAcronym?: boolean;
   className?: Optional<string>;
 }
 
-const DropdownOptionWithAcronym: FC<Props> = ({
-  option,
-  option: { title, subtitle, acronym },
+const DropdownPersonOptionWIthAcronym: FC<Props> = ({
+  user,
+  user: { name, email },
+  withAcronym,
   onOptionClick,
   className,
   ...otherProps
 }) => {
   function handleKeyPress(event: React.KeyboardEvent): void {
     if (event.key === 'Enter') {
-      onOptionClick(option);
+      onOptionClick(user);
     }
   }
 
   function onOptionClickHandler(): void {
-    onOptionClick(option);
+    onOptionClick(user);
   }
 
   const rootClass = classnames(
@@ -42,13 +44,17 @@ const DropdownOptionWithAcronym: FC<Props> = ({
       tabIndex={0}
       className={rootClass}
     >
-      {acronym && <div className={styles.optionIcon}>{acronym}</div>}
+      {withAcronym && (
+        <div style={{ width: '45px' }}>
+          <Avatar user={user} />
+        </div>
+      )}
       <div className={styles.optionTitleSubtitle}>
-        <div>{title}</div>
-        {subtitle && <div className={styles.optionSubtitle}>{subtitle}</div>}
+        <div>{name}</div>
+        {email && <div className={styles.optionSubtitle}>{email}</div>}
       </div>
     </div>
   );
 };
 
-export default DropdownOptionWithAcronym;
+export default DropdownPersonOptionWIthAcronym;

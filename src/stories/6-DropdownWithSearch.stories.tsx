@@ -1,34 +1,34 @@
 import React from 'react';
 import { withKnobs } from '@storybook/addon-knobs';
-import DropdownWithSearch from '../components/dropdownWithSearch';
+import PersonsDropdownWithSearch from '../components/personsDropdownWithSearch';
 
 const options = [
   {
-    title: 'Daniel Lupascu',
-    subtitle: 'daniel@dixa.com',
-    acronym: 'DL',
+    id: (Math.random() * 1.345).toString(),
+    name: 'Daniel Lupascu',
+    email: 'daniel@dixa.com',
   },
   {
-    title: 'Michael Morris',
-    subtitle: 'mike@dixa.com',
-    acronym: 'MM',
+    id: (Math.random() * 1.345).toString(),
+    name: 'Michael Morris',
+    email: 'mike@dixa.com',
   },
   {
-    title: 'Frank Johnson',
-    subtitle: 'frank@dixa.com',
-    acronym: 'FJ',
+    id: (Math.random() * 1.345).toString(),
+    name: 'Frank Johnson',
+    email: 'frank@dixa.com',
   },
   {
-    title: 'Richard Dixon',
-    subtitle: 'rich@dixa.com',
-    acronym: 'RD',
+    id: (Math.random() * 1.345).toString(),
+    name: 'Richard Dixon',
+    email: 'rich@dixa.com',
   },
 ];
 
 export const regular: React.FC = () => (
   <div>
     <div>
-      <DropdownWithSearch options={options} />
+      <PersonsDropdownWithSearch options={options} withAcronyms />
     </div>
   </div>
 );
