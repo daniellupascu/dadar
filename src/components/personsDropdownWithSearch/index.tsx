@@ -4,7 +4,7 @@ import DropdownOption from '../dropdownPersonOptionWIthAcronym';
 import Input from '../input';
 // looks like a false positive
 // eslint-disable-next-line import/no-unresolved
-import styles from './dropdownWithSearch.module.scss';
+import styles from './personDropdownWithSearch.module.scss';
 
 interface Props {
   options: Array<User>;

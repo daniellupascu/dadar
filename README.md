@@ -18,7 +18,7 @@ Runs snaphsot tests
 
 ## Components created
 
-**DropdownWithSearch**
+**personDropdownWithSearch**
 
 Dropdown with a search field<br />
 shows a list of options when focused<br />
@@ -28,7 +28,7 @@ user can filter the options by typing in the input<br />
 
 Renders an input and its label and can be used both as part of a dropdown or as a simple input<br />
 
-**DropdownOptionWithAcronym**
+**personDropdownOptionWithAcronym**
 
 Renders a dropdown option<br />
 If provided, it renders an icon with the option acronym<br />
