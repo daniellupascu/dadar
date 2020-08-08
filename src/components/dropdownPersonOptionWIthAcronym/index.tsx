@@ -49,9 +49,9 @@ const DropdownPersonOptionWIthAcronym: FC<Props> = ({
           <Avatar user={user} />
         </div>
       )}
-      <div className={styles.optionTitleSubtitle}>
+      <div className={styles.optionNameEmail}>
         <div>{name}</div>
-        {email && <div className={styles.optionSubtitle}>{email}</div>}
+        {email && <div className={styles.optionEmail}>{email}</div>}
       </div>
     </div>
   );

@@ -22,7 +22,7 @@
   }
 }
 
-.optionTitleSubtitle {
+.optionNameEmail {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -30,21 +30,7 @@
   margin-left: 20px;
 }
 
-.optionIcon {
-  background-color: pink;
-  height: 40px;
-  width: 40px;
-  border-radius: 5px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  font-size: 18px;
-  color: white;
-}
-
-.optionSubtitle {
+.optionEmail {
   color: #ababab;
   font-size: 14px;
 }
